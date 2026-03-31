@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'PriorityFont';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/NotoColorEmoji-Regular.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PriorityFont';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/UnifontJP-Regular.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PriorityFont';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/fusion-pixel-12px-proportional-ja.ttf.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PriorityFont';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/my-website@main/static/zpix%20(1).woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 强制所有元素使用PriorityFont，优先级最高 */
+* {
+    font-family: 'PriorityFont', sans-serif !important;
+}
+
+/* 确保伪元素也被覆盖 */
+::before, ::after {
+    font-family: 'PriorityFont', sans-serif !important;
+}
+
+/* 处理输入框和按钮的字体 */
+input, textarea, button, select {
+    font-family: 'PriorityFont', sans-serif !important;
+}
