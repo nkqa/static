@@ -1,0 +1,94 @@
+/* ===== 字体加载 ===== */
+@font-face {
+    font-family: 'FusionPixelJA';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/fusion-pixel-12px-proportional-ja.ttf.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FusionPixelKO';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/fusion-pixel-12px-proportional-ko.otf.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FusionPixelZHHans';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/fusion-pixel-12px-proportional-zh_hans.otf.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FusionPixelZHHant';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/fusion-pixel-12px-proportional-zh_hant.otf.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'UnifontJP';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/Unifont-JP.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'UnifontT';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/Unifont-T.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'UnifontHans';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/Unifont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'NotoColorEmoji';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/NotoColorEmoji-Regular.woff2') format('woff2');
+}
+
+/* ===== fallback 组 ===== */
+
+/* 默认 / 其他语言：大陆简体 */
+:root,
+html.lang-other,
+html.lang-zh-hans {
+    --priority-font:
+        'FusionPixelZHHans',
+        'UnifontHans',
+        'NotoColorEmoji',
+        sans-serif;
+}
+
+/* 繁体 */
+html.lang-zh-hant {
+    --priority-font:
+        'FusionPixelZHHant',
+        'UnifontT',
+        'NotoColorEmoji',
+        sans-serif;
+}
+
+/* 日文 */
+html.lang-ja {
+    --priority-font:
+        'FusionPixelJA',
+        'UnifontJP',
+        'NotoColorEmoji',
+        sans-serif;
+}
+
+/* 韩文（回退用繁体） */
+html.lang-ko {
+    --priority-font:
+        'FusionPixelKO',
+        'UnifontT',
+        'NotoColorEmoji',
+        sans-serif;
+}
+
+/* ===== 应用 ===== */
+*,
+::before,
+::after {
+    font-family: var(--priority-font) !important;
+}
+
+input,
+textarea,
+button,
+select {
+    font-family: var(--priority-font) !important;
+}
