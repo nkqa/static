@@ -39,7 +39,7 @@
     src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/NotoColorEmoji-Regular.woff2') format('woff2');
 }
 
-/* ===== fallback 组 ===== */
+/* ===== fallback 组（按系统语言 class 切换） ===== */
 
 /* 默认 / 其他语言：大陆简体 */
 :root,
@@ -79,16 +79,15 @@ html.lang-ko {
         sans-serif;
 }
 
-/* ===== 应用 ===== */
-*,
-::before,
-::after {
-    font-family: var(--priority-font) !important;
+/* ===== 应用（不再强制覆盖） ===== */
+html {
+    font-family: var(--priority-font);
 }
 
+/* 表单继承 */
 input,
 textarea,
 button,
 select {
-    font-family: var(--priority-font) !important;
+    font-family: inherit;
 }
