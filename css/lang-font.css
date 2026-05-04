@@ -41,7 +41,7 @@
 
 /* ===== fallback 组 ===== */
 
-/* 默认 / 其他语言（简体） */
+/* 默认 / 其他语言：大陆简体 */
 :root,
 html.lang-other,
 html.lang-zh-hans {
@@ -79,15 +79,16 @@ html.lang-ko {
         sans-serif;
 }
 
-/* ===== 应用（关键修复点） ===== */
-html, body {
-    font-family: var(--priority-font);
+/* ===== 应用 ===== */
+*,
+::before,
+::after {
+    font-family: var(--priority-font) !important;
 }
 
-/* 表单继承 */
 input,
 textarea,
 button,
 select {
-    font-family: inherit;
+    font-family: var(--priority-font) !important;
 }
