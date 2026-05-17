@@ -39,6 +39,22 @@
     src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/NotoColorEmoji-Regular.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'AlibabaPuhuiti-L3';
+    src: url('https://github.com/nkqa/homepage/blob/main/static/fonts/AlibabaPuHuiTi-3-55-RegularL3.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Jigmo2';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/Jigmo2.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Jigmo3';
+    src: url('https://cdn.jsdmirror.com/gh/nkqa/homepage@main/static/fonts/Jigmo3.woff2') format('woff2');
+}
+
+
 /* ===== fallback 组 ===== */
 
 /* 默认 / 其他语言：大陆简体 */
@@ -48,6 +64,8 @@ html.lang-zh-hans {
     --priority-font:
         'FusionPixelZHHans',
         'UnifontHans',
+        'AlibabaPuhuiti-L3',
+        'Jigmo3',
         'NotoColorEmoji',
         sans-serif;
 }
@@ -57,6 +75,8 @@ html.lang-zh-hant {
     --priority-font:
         'FusionPixelZHHant',
         'UnifontT',
+        'Jigmo2',
+        'Jigmo3',
         'NotoColorEmoji',
         sans-serif;
 }
@@ -66,6 +86,8 @@ html.lang-ja {
     --priority-font:
         'FusionPixelJA',
         'UnifontJP',
+        'Jigmo2',
+        'Jigmo3',
         'NotoColorEmoji',
         sans-serif;
 }
@@ -75,6 +97,8 @@ html.lang-ko {
     --priority-font:
         'FusionPixelKO',
         'UnifontT',
+        'Jigmo2',
+        'Jigmo3',
         'NotoColorEmoji',
         sans-serif;
 }
